@@ -1,5 +1,5 @@
 export interface ArticleType {
-  id: number;   // id of the article
+  id: string;   // id of the article
   title: string;   // title of the article
   summary: string;   // summary of the article
   image: string;   // image of the article
