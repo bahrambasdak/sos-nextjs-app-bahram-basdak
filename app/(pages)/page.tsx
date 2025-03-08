@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="pageContainer mx-auto mt-6 gap-4">
+    <div className="pageContainer mx-auto mt-6 gap-5">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-medium text-[#121212]">مقاله ها</h1>
         <button className="text-[#1158A7] text-base font-semibold">

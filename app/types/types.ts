@@ -5,3 +5,9 @@ export interface ArticleType {
   image: string;   // image of the article
   period: string;   // period of the article
 }
+
+export interface Todo {
+  id: string;
+  text: string;
+  completed: boolean;
+}

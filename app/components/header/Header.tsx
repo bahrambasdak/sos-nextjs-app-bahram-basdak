@@ -8,7 +8,7 @@ import { useState } from "react";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="w-full flex justify-center   shadow-[0px_8px_8px_0px_#12121233] h-16 md:h-[72px]  text-[#1158A7] text-sm font-normal">
+    <header className="w-full flex justify-center   shadow-[0px_8px_8px_0px_#12121233] h-16 md:h-[72px]  text-[#1158A7] text-sm font-normal z-20">
       <div className="  c_container flex justify-between items-center gap-6">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
