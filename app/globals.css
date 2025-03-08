@@ -1,26 +1,62 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+
+@tailwind base;
+@layer base {
+  img {
+    @apply inline-block;
+  }
+  .c_container {
+    width: 100%;
+    padding-inline: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pageContainer {
+    min-height: 90vh;
+    width: 100%;
+    padding-inline: 5%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .pageContainer {
+      padding-inline: 5%;
+    }
+    .c_container {
+      padding-inline: 5%;
+    }
+  }
+}
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  box-sizing: border-box;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "IRANSansXV";
 }

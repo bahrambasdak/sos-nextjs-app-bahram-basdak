@@ -1,0 +1,15 @@
+
+
+
+@font-face {
+    font-family: 'IRANSansXV'; 
+    src: url('./../public/fonts/IRANSansXV.woff2') format('truetype'); 
+}
+body{
+    font-family: IRANSansXV;
+}
+
+
+
+
+
