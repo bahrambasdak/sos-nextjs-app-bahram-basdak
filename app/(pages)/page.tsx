@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { ArticleType } from "@/app/types/types";
 import Article from "@/app/components/article";
 

@@ -27,23 +27,28 @@
   ],
   "todos": [
     {
-      "id": "1",
-      "text": "Learn Next.js",
+      "id": "d1b0",
+      "text": "hjkjkjh",
+      "completed": true
+    },
+    {
+      "id": "0df3",
+      "text": "hjkhjkhjk",
       "completed": false
     },
     {
-      "id": "2",
-      "text": "Write a blog post",
+      "id": "877a",
+      "text": "hjkhjk",
       "completed": true
     },
     {
-      "id": "3",
-      "text": "write a test for the node.js   ",
+      "id": "805c",
+      "text": "hjkjk",
       "completed": true
     },
     {
-      "id": "4",
-      "text": "  Deploy the app" ,
+      "id": "4017",
+      "text": "jkhjkhjk",
       "completed": false
     }
   ]
