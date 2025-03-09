@@ -4,52 +4,51 @@
       "id": "1",
       "title": "راهنمای دریافت معرفی‌نامه",
       "summary": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و...",
-      "image": "/images/articles/arctic-fox.webp"
+      "image": "/images/articles/arctic-fox.webp",
+      "period": "5 دقیقه"
     },
     {
       "id": "2",
       "title": "راهنمای دریافت معرفی‌نامه",
       "summary": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و...",
-      "image": "/images/articles/elephants.webp"
+      "image": "/images/articles/elephants.webp",
+      "period": "36 دقیقه"
     },
     {
       "id": "3",
       "title": "راهنمای دریافت معرفی‌نامه",
       "summary": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و...",
-      "image": "/images/articles/honey-bee.webp"
+      "image": "/images/articles/honey-bee.webp",
+      "period": "25 دقیقه"
     },
     {
       "id": "4",
       "title": "راهنمای دریافت معرفی‌نامه",
       "summary": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و...",
-      "image": "/images/articles/whale.webp"
+      "image": "/images/articles/whale.webp",
+      "period": "10 دقیقه"
     }
   ],
   "todos": [
     {
-      "id": "d1b0",
-      "text": "hjkjkjh",
-      "completed": true
-    },
-    {
-      "id": "0df3",
-      "text": "hjkhjkhjk",
-      "completed": false
-    },
-    {
-      "id": "877a",
-      "text": "hjkhjk",
-      "completed": true
-    },
-    {
-      "id": "805c",
-      "text": "hjkjk",
-      "completed": true
-    },
-    {
       "id": "4017",
       "text": "jkhjkhjk",
       "completed": false
+    },
+    {
+      "id": "8616",
+      "text": "dfgfdg",
+      "completed": false
+    },
+    {
+      "id": "6418",
+      "text": "nvbnvbn",
+      "completed": true
+    },
+    {
+      "id": "274f",
+      "text": "vbnbvnbvn",
+      "completed": true
     }
   ]
 }

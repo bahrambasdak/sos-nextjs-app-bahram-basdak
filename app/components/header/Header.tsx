@@ -8,7 +8,7 @@ import { useState } from "react";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="w-full flex justify-center   shadow-[0px_8px_8px_0px_#12121233] h-16 md:h-[72px]  text-[#1158A7] text-sm font-normal z-20">
+    <header className="w-full flex justify-center   shadow-[0px_8px_8px_0px_#12121233] h-16 md:h-[72px]  text-[#1158A7] text-sm font-normal ">
       <div className="  c_container flex justify-between items-center gap-6">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -23,7 +23,7 @@ const Header = () => {
         />
         <div
           style={{ insetInlineStart: menuOpen ? "0" : "-100%" }}
-          className=" flex flex-col md:flex-row justify-evenly items-center grow   absolute md:static gap-4 top-16 bg-slate-50 md:bg-transparent p-4 transition-all duration-300 ease-in-out  "
+          className=" flex flex-col md:flex-row justify-evenly items-center grow   absolute md:static gap-4 top-16 bg-slate-50 md:bg-transparent p-4 transition-all duration-300 ease-in-out z-10 rounded-bl-lg"
         >
           <NavLink url="/" text="صفحه اصلی" />
           <NavLink url="/todo-list" text="todo list" />
