@@ -17,28 +17,27 @@ export const getTodos = async () => {
   return data;
 };
 
+export const postTodo = async (data: Todo) => {
+  const res = await fetch("http://localhost:4000/todos", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+};
 
+export const editTodo = async (id: string, data: Todo) => {
+  const res = await fetch(`http://localhost:4000/todos/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  return res.json();
+};
 
-export const postTodo = async (data:Todo) => {
-    const res = await fetch("http://localhost:4000/todos",{
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });   
-      return res.json();
-  };
-
-  export const editTodo = async (id: string , data:Todo) => {
-    const res =await fetch(`http://localhost:4000/todos/${id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    return res.json();
-
-  };
-
-  export const deleteTodo = async (id: string) => {
-    const res= await fetch(`http://localhost:4000/todos/${id}`, { method: "DELETE" })
-    return res.json();
-  };
+export const deleteTodo = async (id: string) => {
+  const res = await fetch(`http://localhost:4000/todos/${id}`, {
+    method: "DELETE",
+  });
+  return res.json();
+};

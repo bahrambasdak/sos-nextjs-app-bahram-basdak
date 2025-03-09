@@ -7,25 +7,25 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-
-
-
 const ArticlePage = () => {
   const { articleId } = useParams();
   const [article, setArticle] = useState<ArticleType>({} as ArticleType);
   useEffect(() => {
-    getArticle(articleId as string).then((data) => {
-      setArticle(data);
-    })
+    getArticle(articleId as string)
+      .then((data) => {
+        setArticle(data);
+      })
       .catch((err) => {
         console.log(err);
       });
   }, [articleId]);
-  if(!article.id) return <div>در حال بارگذاری...</div>;
+  if (!article.id) return <div>در حال بارگذاری...</div>;
   return (
     <main className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg border border-gray-200 mt-4">
       <h1 className="text-3xl font-bold text-gray-900 mb-4">{article.title}</h1>
-      <time className="text-gray-500 text-sm mb-2 block">{toPersianDigits(article.period)}</time>
+      <time className="text-gray-500 text-sm mb-2 block">
+        {toPersianDigits(article.period)}
+      </time>
       <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden">
         <Image
           src={article?.image}

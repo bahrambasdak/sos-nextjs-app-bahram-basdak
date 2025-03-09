@@ -9,13 +9,10 @@ export const metadata: Metadata = {
 };
 
 const IRANSansXV = localFont({
-  src: '../public/fonts/IRANSansXV.woff2',
-  display: 'swap',
-  variable: '--font-IRANSansXV',
-
-})
-
-
+  src: "../public/fonts/IRANSansXV.woff2",
+  display: "swap",
+  variable: "--font-IRANSansXV",
+});
 
 export default function RootLayout({
   children,

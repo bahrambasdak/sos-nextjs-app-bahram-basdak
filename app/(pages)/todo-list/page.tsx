@@ -9,42 +9,55 @@ export default function TodoList() {
   const [newTodo, setNewTodo] = useState("");
   const [filter, setFilter] = useState<"all" | "completed" | "pending">("all");
   const [loading, setLoading] = useState(true);
+  const [status, setStatus] = useState("در حال بارگذاری...");
 
   useEffect(() => {
     fetchTodos();
   }, []);
 
   const fetchTodos = () => {
-    getTodos().then((data) => {
-      setTodos(data);
-      setLoading(false);
-    });
+    getTodos()
+      .then((data) => {
+        setTodos(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setStatus("خطا در دریافت اطلاعات . لطفا از اجرا بودن سرور مطمعن شوید");
+
+        console.log(err);
+      });
   };
 
   const addTodo = () => {
     if (!newTodo.trim()) return;
     const todo = { text: newTodo, completed: false };
 
-    postTodo(todo as Todo).then((data) => {
-      setTodos([...todos, data]);
-      setNewTodo("");
-    });
+    postTodo(todo as Todo)
+      .then((data) => {
+        setTodos([...todos, data]);
+        setNewTodo("");
+      })
+      .catch((err) => console.log(err));
   };
 
   const toggleTodo = (id: string, completed: boolean) => {
-    editTodo(id, { completed: !completed } as Todo).then(() => {
-      setTodos(
-        todos.map((todo) =>
-          todo.id === id ? { ...todo, completed: !completed } : todo
-        )
-      );
-    });
+    editTodo(id, { completed: !completed } as Todo)
+      .then(() => {
+        setTodos(
+          todos.map((todo) =>
+            todo.id === id ? { ...todo, completed: !completed } : todo
+          )
+        );
+      })
+      .catch((err) => console.log(err));
   };
 
   const deleteTodoById = (id: string) => {
-    deleteTodo(id).then(() => {
-      setTodos(todos.filter((todo) => todo.id !== id));
-    });
+    deleteTodo(id)
+      .then(() => {
+        setTodos(todos.filter((todo) => todo.id !== id));
+      })
+      .catch((err) => console.log(err));
   };
 
   const filteredTodos = todos.filter((todo) => {
@@ -93,7 +106,7 @@ export default function TodoList() {
         ))}
       </div>
       {loading ? (
-        <div>در حال بارگذاری...</div>
+        <div>{status}</div>
       ) : (
         <ul className="space-y-3">
           {filteredTodos.map((todo) => (

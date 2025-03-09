@@ -7,12 +7,18 @@ import { getArticles } from "../apis";
 export default function Home() {
   const [articles, setArticles] = useState<ArticleType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [status, setStatus] = useState("در حال بارگذاری...");
 
   useEffect(() => {
-    getArticles().then((data) => {
-      setArticles(data);
-      setLoading(false);
-    });
+    getArticles()
+      .then((data) => {
+        setArticles(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setStatus("خطا در دریافت اطلاعات . لطفا از اجرا بودن سرور مطمعن شوید");
+      });
   }, []);
 
   return (
@@ -25,7 +31,7 @@ export default function Home() {
       </div>
       <div className="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]  gap-4  mt-5">
         {loading ? (
-          <div>در حال بارگذاری...</div>
+          <div>{status}</div>
         ) : (
           articles.map((article) => (
             <Article key={article.id} article={article} />

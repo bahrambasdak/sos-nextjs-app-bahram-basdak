@@ -11,12 +11,12 @@ const Article = ({ article = {} as ArticleType }) => (
         src={article.image}
         alt={article.title}
         fill
-        className="w-full   z-0"
+        className="w-full z-0"
       />
     </div>
 
     <h3 className="text-base font-semibold text-[#121212]">{article.title}</h3>
-    <time className="flex items-center gap-2">
+    <time className="flex items-center gap-2 text-[#9E9E9E]">
       <Image src={clockIcon} alt="clockIcon" />
       {toPersianDigits(article.period)}
     </time>
